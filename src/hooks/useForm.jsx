@@ -13,8 +13,6 @@ export function useForm(steps){
             setCurrentStep(i) //Mudar a etapa
         }
     }
-    
-    
 
     return{ //Retornar qual etapa está o usuário
         currentStep,
