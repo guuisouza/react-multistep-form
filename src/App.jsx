@@ -22,9 +22,15 @@ const formTemplate = {
 function App(){ //Tudo dentro deste arquivo são componentes fixos que não serão alterados
   const [data, setData] = useState(formTemplate) //Inicializar ele como um template e esse data será compartilhado com todos componentes
   
+  const updateFieldHandler = (key, value) => {
+    return setData((prev) => {
+      return {...prev, [key]: value}
+    })
+  }
+
   const formComponents = [
-  <UserForm data={data} />, 
-  <ReviewForm data={data}/>, 
+  <UserForm data={data} updateFieldHandler={updateFieldHandler}/>, 
+  <ReviewForm data={data} updateFieldHandler={updateFieldHandler}/>, 
   <Thanks data={data}/>] //Passando o data para os componentes em forma de prop
 
   const {currentStep, currentComponent, changeStep, isLastStep, isFirstStep} = useForm(formComponents) //Passando os itens do array acima
