@@ -10,3 +10,6 @@ Consiste em 3 etapas de um formulário de avaliação de um produto para uma loj
 - HTML / CSS / JS  
 - ReactJS
 - ViteJS
+
+# Git Hub Pages
+O formulário está disponivel para visualização [aqui](https://guuisouza.github.io/react-multistep-form/ "Abrir Link")
